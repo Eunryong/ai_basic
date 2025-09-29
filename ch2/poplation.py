@@ -2,6 +2,7 @@ import pandas as pd
 import matplotlib
 matplotlib.use('TkAgg') 
 import matplotlib.pyplot as plt
+
 def filter_columns(df):
     """필요한 컬럼만 선택 (일반가구원 관련 컬럼)"""
     columns_to_keep = ['행정구역별(시군구)', '시점', '성별', '연령별', '일반가구원']
@@ -103,7 +104,7 @@ def main():
         plot_age_gender_graph(df, ax)
         plt.tight_layout()
         plt.show()
-        
+
     except (FileNotFoundError, IOError):
         print("Invalid File")
 
