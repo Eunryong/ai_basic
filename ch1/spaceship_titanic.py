@@ -114,6 +114,9 @@ def find_strongest_correlation(data):
     analysis_results = []
     
     correlation_matrix = analysis_data.corr(numeric_only=True)
+
+    print(correlation_matrix)
+
     transported_corr = correlation_matrix['Transported'].drop('Transported')
 
     for col, corr_value in transported_corr.items():
@@ -142,6 +145,7 @@ def find_strongest_correlation(data):
 def merge_data(train, test):
     merged_data = pd.concat([train, test], ignore_index=True)
 
+    print(merged_data)
     print(merged_data.shape)
     print(len(merged_data))
 
