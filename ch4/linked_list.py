@@ -55,7 +55,6 @@ class LinkedList:
             return
         
         current = self.head
-        index = 0
         while current is not None:
             print(f"{current.data}")
             current = current.next

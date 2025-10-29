@@ -102,6 +102,21 @@ class CircularLinkedList:
                 break
         
         return None
+    
+    def search(self, data):
+        if self.head is None:
+            return False
+        
+        current = self.head
+        while True:
+            if current.data == data:
+                return True
+            
+            current = current.next
+            if current == self.head:
+                break
+        
+        return False
 
 def main():
     circularlist = CircularLinkedList()
